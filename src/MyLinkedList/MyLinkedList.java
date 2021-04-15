@@ -1,8 +1,10 @@
 package MyLinkedList;
 
+import MyArrayList.MyArrayList;
+
 import java.util.Iterator;
 
-public class MyLinkedList <E> implements Methods <E> {
+public class MyLinkedList <E> implements Methods<E> {
     private Node <E> first;
     private Node <E> last;
     private int size = 0;
