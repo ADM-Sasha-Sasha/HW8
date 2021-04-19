@@ -12,7 +12,7 @@ public class Main {
             System.out.println(s);
         }
 
-        System.out.println(strings.add("Hello"));
+        System.out.println(strings.add(""));
         System.out.println(strings.clear());
         System.out.println(strings.size());
         System.out.println(strings.get(1));

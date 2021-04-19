@@ -45,6 +45,8 @@ public class MyArrayList <E> implements Methods<E>{
 
     @Override
     public E clear() {
+        for (int i = 0; i<values.length; i++)
+            values[i] = null;
         return null;
     }
 
