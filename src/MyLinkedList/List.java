@@ -7,5 +7,8 @@ public interface List <T>{
     void clear(); // очищает коллекцию
     int size(); // возвращает размер коллекции
     T get(int index); // возвращает элемент под индексом
-    Iterator<T> iterator();
+
+    String toString();
+
+    Iter<T> iterator();
 }

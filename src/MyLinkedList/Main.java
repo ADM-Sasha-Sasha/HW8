@@ -6,9 +6,9 @@ public class Main {
 
         MyLinkedList<Integer> list = new MyLinkedList<Integer>();
 
-        list.add(40);
+        //list.add(40);
         list.clear();
-        list.get(1);
+        //list.get(1);
         list.size();
         list.remove(2);
 

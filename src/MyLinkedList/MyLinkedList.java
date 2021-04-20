@@ -1,15 +1,17 @@
 package MyLinkedList;
 
 public class MyLinkedList <T> implements List <T> {
-    private static class Node <E> {
-        E item;
-        Node<E> next;
-        Node<E> prev;
+    private static class Node <T> {
+        T item;
+        Node<T> next;
+        Node<T> prev;
+        private T[] values;
 
-        public Node(E item) {
+        public Node(T item) {
             this.item = null;
             this.next = null;
             this.prev = null;
+            values = (T[]) new Object[0];
         }
     }
         private Node<T> first;
@@ -78,13 +80,18 @@ public class MyLinkedList <T> implements List <T> {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("[");
-        Iterator<T> iterator = this.iterator();
-        while(iterator.hasNext()){
+        Iter<T> iterator = this.iterator();
+        while(Iter.hasNext()){
             sb.append(iterator.next());
-            if (iterator.hasNext()) sb.append(", ");
+            if (Iter.hasNext()) sb.append(", ");
         }
         sb.append("]");
         return sb.toString();
 
+    }
+
+    @Override
+    public Iter<T> iterator() {
+            return new Iter<T>();
     }
 }
